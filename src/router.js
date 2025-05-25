@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 import ProductList from './components/product/ProductList.vue';
+import Home from './components/home/Home.vue';
 import ProductDetails from './components/product/ProductDetails.vue';
 import AddProduct from './components/product/AddProduct.vue';
 import EditProduct from './components/product/EditProduct.vue';
-
 
 import CategoryList from './components/category/CategoryList.vue';
 import CategoryDetails from './components/category/CategoryDetails.vue';
@@ -17,11 +17,14 @@ import Login from './components/Login.vue'; // Import the Login component
 import Register from './components/Register.vue'; // Import the Register component
 
 const routes = [
-
-
-
     {
-        path: '/',
+        path: '/home',
+        name: 'Home',
+        component: Home,
+        meta: { public: false } // Mark this route as private
+    },
+    {
+        path: '/product-list',
         name: 'ProductList',
         component: ProductList,
         meta: { public: false } // Mark this route as private

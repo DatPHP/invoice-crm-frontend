@@ -154,7 +154,7 @@ export default {
               text: data.message,
             });
             // If the request is successful, redirect to the product list
-            this.$router.push("/");
+            this.$router.push("/product-list");
             //navigate("/product")
           })
           .catch(({ response }) => {

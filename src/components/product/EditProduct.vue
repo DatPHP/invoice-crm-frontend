@@ -194,7 +194,7 @@ export default {
               icon: "success",
               text: response.message,
             });
-            router.push("/");
+            router.push("/product-list");
           })
           .catch((error) => {
             //console.error('There was an error!', error);
