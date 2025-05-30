@@ -61,7 +61,7 @@
      
       <!-- <input accept="image/*" type="file" @change="previewFiles($event)" /> -->
 
-      <input accept="image/*" type="file" @change="onFileChange">
+      <input accept="image/*" type="file" @change="onFileChange" class="mb-3">
      
       
       <img v-if="!product.image && !imagePreview"
@@ -79,7 +79,7 @@
 
 
       <!-- Submit button -->
-      <button type="submit" class="submit-button">Update Product</button>
+      <button type="submit" class="submit-button mt-3">Update Product</button>
     </form>
   </div>
 </template>

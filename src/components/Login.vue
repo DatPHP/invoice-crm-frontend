@@ -56,7 +56,7 @@ export default {
           this.$store.commit("LOGIN");
 
           // Navigate to the home page after successful login
-          this.$router.push("/");
+          this.$router.push("/home");
         }
       } catch (error) {
         // Log any errors encountered during the login process

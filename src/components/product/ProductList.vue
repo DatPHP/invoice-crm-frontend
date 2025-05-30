@@ -60,11 +60,17 @@
             <tr v-for="product in products" :key="product.id">
               <td class="p-4 border-b border-blue-gray-50">
                 <div class="flex items-center gap-3">
-                  <img
+                  <img v-if="!product.image"
                     src="https://docs.material-tailwind.com/img/logos/logo-spotify.svg"
                     alt="Spotify"
                     class="relative inline-block h-12 w-12 !rounded-full border border-blue-gray-50 bg-blue-gray-50/50 object-contain object-center p-1"
                   />
+
+                  <img v-if="product.image"
+                    :src="`http://localhost:8000/storage/product/image/${product.image}`"
+                      alt="Product Image"
+                      class="relative inline-block h-12 w-12 !rounded-full border border-blue-gray-50 bg-blue-gray-50/50 object-contain object-center p-1"
+                      >
                   <p
                     class="block font-sans text-sm antialiased font-bold leading-normal text-blue-gray-900"
                   >

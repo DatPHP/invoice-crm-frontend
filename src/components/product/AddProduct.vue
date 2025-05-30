@@ -53,14 +53,14 @@
     <!-- Displayed if 'errors.price' is truthy -->
     <p v-if="errors.price" class="error">{{ errors.price }}</p>
     
-    <input accept="image/*" type="file" @change="previewFiles($event)" />
+    <input accept="image/*" type="file" @change="previewFiles($event)" class="mb-3"/>
     <img
       alt=""
       :src="newImage || 'https://www.namepros.com/attachments/empty-png.89209/'"
     />
 
     <!-- Button for submitting the form -->
-    <button type="submit" class="submit-button">Add Product</button>
+    <button type="submit" class="submit-button mt-3">Add Product</button>
   </form>
 </template>
 <script>
