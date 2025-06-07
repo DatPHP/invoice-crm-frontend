@@ -5,7 +5,7 @@ import Home from './components/home/Home.vue';
 import ProductDetails from './components/product/ProductDetails.vue';
 import AddProduct from './components/product/AddProduct.vue';
 import EditProduct from './components/product/EditProduct.vue';
-
+import CompanyForm from './components/company/CompanyForm.vue';
 import CategoryList from './components/category/CategoryList.vue';
 import CategoryDetails from './components/category/CategoryDetails.vue';
 import AddCategory from './components/category/AddCategory.vue';
@@ -16,11 +16,18 @@ import invoice from './components/invoice/Invoice.vue';
 import Login from './components/Login.vue'; // Import the Login component
 import Register from './components/Register.vue'; // Import the Register component
 
+
 const routes = [
     {
         path: '/home',
         name: 'Home',
         component: Home,
+        meta: { public: false } // Mark this route as private
+    },
+    {
+        path: '/company',
+        name: 'Company',
+        component: CompanyForm,
         meta: { public: false } // Mark this route as private
     },
     {
